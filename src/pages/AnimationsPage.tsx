@@ -1291,7 +1291,19 @@ export const AnimationsPage: React.FC = () => {
               onClick={() => setGlobalPaused((prev) => !prev)}
               aria-pressed={globalPaused}
             >
-              {globalPaused ? '▶ Resume Loops' : '❚❚ Pause Loops'}
+              <span className="catalogue-btn-icon" aria-hidden="true">
+                {globalPaused ? (
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                ) : (
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="5" y="4" width="4" height="16" />
+                    <rect x="15" y="4" width="4" height="16" />
+                  </svg>
+                )}
+              </span>
+              <span>{globalPaused ? 'Resume Loops' : 'Pause Loops'}</span>
             </button>
 
             <button
@@ -1299,7 +1311,39 @@ export const AnimationsPage: React.FC = () => {
               className="catalogue-reset-btn"
               onClick={handleToggleAllSections}
             >
-              {allAreCollapsed ? '⊞ Expand All Sections' : '⊟ Collapse All Sections'}
+              <span className="catalogue-btn-icon" aria-hidden="true">
+                {allAreCollapsed ? (
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                    <line x1="12" y1="8" x2="12" y2="16" />
+                    <line x1="8" y1="12" x2="16" y2="12" />
+                  </svg>
+                ) : (
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                    <line x1="8" y1="12" x2="16" y2="12" />
+                  </svg>
+                )}
+              </span>
+              <span>{allAreCollapsed ? 'Expand All Sections' : 'Collapse All Sections'}</span>
             </button>
           </div>
 
