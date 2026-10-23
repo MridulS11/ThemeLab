@@ -1470,23 +1470,23 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
+  gap: 1.25rem;
 }
 
 .mylist-item-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.32rem;
+  gap: 0.35rem;
   min-width: 0;
-  flex: 1;
+  flex: 1 1 auto;
 }
 
 .mylist-item-name {
   font-size: 1.05rem;
   font-weight: 700;
   line-height: 1.25;
+  word-break: break-word;
 }
 
 .mylist-item-category {
@@ -1767,6 +1767,67 @@ button {
   .wireframe-grid,
   .gallery-grid {
     gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mylist-item-main {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+  }
+
+  .mylist-item-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .mylist-item-name {
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .mylist-item-category {
+    font-size: 0.74rem;
+  }
+
+  .mylist-item-actions {
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .mylist-action-btn {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 36px;
+    padding: 0 0.5rem;
+    font-size: 0.82rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .mylist-remove-btn {
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .mylist-clear-btn,
+  .mylist-download-pdf-btn {
+    width: 100%;
   }
 }
 
