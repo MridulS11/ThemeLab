@@ -21,14 +21,6 @@
   margin: 0 0 0.45rem;
 }
 
-.animations-subheading {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--pf-text-muted);
-  letter-spacing: 0.02em;
-  margin: 0 0 0.85rem;
-}
-
 .animations-description {
   margin: 0;
   font-size: 1rem;
