@@ -1216,8 +1216,9 @@ export const AnimationsPage: React.FC = () => {
     <section className="animations-section" aria-labelledby="animations-page-heading">
       <div className="animations-header">
         <h1 id="animations-page-heading" className="animations-heading">
-          Animations &amp; Visual Effects ({ANIMATION_DEMOS.length} Live Demonstrations)
+          Animations &amp; Visual Effects
         </h1>
+        <p className="animations-subheading">{ANIMATION_DEMOS.length} Live Demonstrations</p>
         <p className="animations-description">
           Explore how motion, interaction, and visual effects can transform a website experience.
           Organized across 10 core motion and visual effect families with live browser-rendered

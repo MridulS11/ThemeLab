@@ -32,8 +32,9 @@ export const ThemesGalleryPage: React.FC = () => {
     <section className="gallery-section" aria-labelledby="themes-gallery-heading">
       <div className="gallery-intro">
         <h1 id="themes-gallery-heading" className="gallery-heading">
-          Theme Collection ({THEMES.length} Visual Systems)
+          Theme Collection
         </h1>
+        <p className="gallery-subheading">{THEMES.length} Visual Systems</p>
         <p className="gallery-description">
           Twenty-four distinct visual interpretations of one identical landing page. Select any
           theme to explore its live layout, typography, decorative system, and independent
