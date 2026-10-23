@@ -1,0 +1,2117 @@
+/* ==========================================================================
+   Animations & Visual Effects Showcase Styles (/animations)
+   Strictly Neutral Monochrome Black & White Platform Styling
+   ========================================================================== */
+
+.animations-section {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.animations-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+}
+
+.animations-heading {
+  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.75rem;
+}
+
+.animations-description {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--pf-text-secondary);
+}
+
+.anim-category-section {
+  margin-bottom: 3rem;
+}
+
+.anim-category-section.is-collapsed {
+  margin-bottom: 1.5rem;
+}
+
+.anim-category-banner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.85rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--pf-border-primary);
+}
+
+.anim-category-banner-interactive {
+  cursor: pointer;
+  user-select: none;
+}
+
+.anim-category-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-shrink: 0;
+}
+
+.anim-section-collapse-btn {
+  padding: 0.25rem 0.65rem;
+  border: 1px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  color: var(--pf-text-primary);
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.74rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.anim-section-collapse-btn:hover {
+  background-color: var(--pf-accent-inv-bg);
+  color: var(--pf-accent-inv-text);
+}
+
+.anim-category-heading {
+  margin: 0 0 0.25rem;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.anim-category-sub {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--pf-text-secondary);
+}
+
+.anim-category-count {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--pf-border-primary);
+  white-space: nowrap;
+}
+
+.animations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+.anim-card {
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.anim-card-highlighted {
+  box-shadow: 0 0 0 3px var(--pf-border-primary), 6px 6px 0 var(--pf-border-primary);
+}
+
+.anim-controls-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.anim-controls-buttons .anim-control-btn,
+.anim-controls-buttons .add-to-list-btn {
+  width: 142px;
+  height: 32px;
+  padding: 0 0.65rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  box-sizing: border-box;
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.anim-bolt-icon {
+  flex-shrink: 0;
+  color: inherit;
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.anim-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-bottom: 0.35rem;
+}
+
+.anim-card-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+}
+
+.anim-number {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.78rem;
+  color: var(--pf-text-muted);
+}
+
+.anim-name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.anim-badges-group {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.anim-tech-badge {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.14rem 0.42rem;
+  background-color: var(--pf-bg-subtle);
+  border: 1px solid var(--pf-border-subtle);
+  color: var(--pf-text-primary);
+}
+
+.anim-trigger-badge {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.14rem 0.42rem;
+  border: 1px solid var(--pf-border-primary);
+  color: var(--pf-text-secondary);
+}
+
+.anim-category-tag {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.7rem;
+  color: var(--pf-text-muted);
+  margin-bottom: 0.45rem;
+}
+
+.anim-description {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--pf-text-secondary);
+}
+
+/* ==========================================================================
+   Demonstration Stage & Individual Effects (01 - 52)
+   ========================================================================== */
+
+.anim-stage {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: 165px;
+  border: 1px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 0.9rem;
+}
+
+.demo-box {
+  padding: 0.8rem 1.35rem;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.demo-mini-tab {
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  color: var(--pf-text-primary);
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.demo-mini-tab.active,
+.demo-mini-tab:hover {
+  background-color: var(--pf-accent-inv-bg);
+  color: var(--pf-accent-inv-text);
+}
+
+/* 01. Fade In */
+@keyframes kf-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.demo-fade-in {
+  animation: kf-fade-in 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* 02. Slide Up */
+@keyframes kf-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.demo-slide-up {
+  animation: kf-slide-up 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* 03. Scale In */
+@keyframes kf-scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.68);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.demo-scale-in {
+  animation: kf-scale-in 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* 04. Staggered Reveal */
+.demo-stagger-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.demo-stagger-item {
+  height: 56px;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  animation: kf-slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* 05. 3D Flip Entrance */
+@keyframes kf-flip-3d {
+  0% {
+    opacity: 0;
+    transform: perspective(500px) rotateX(-85deg) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(500px) rotateX(0deg) scale(1);
+  }
+}
+
+.demo-flip-3d {
+  animation: kf-flip-3d 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* 06. Optical Blur Reveal */
+@keyframes kf-blur-reveal {
+  0% {
+    opacity: 0;
+    filter: blur(14px);
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1);
+  }
+}
+
+.demo-blur-reveal {
+  animation: kf-blur-reveal 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* 07. Elastic Spring Entrance */
+@keyframes kf-elastic-spring {
+  0% {
+    opacity: 0;
+    transform: translateY(-45px) scale(0.75);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(10px) scale(1.06);
+  }
+  75% {
+    transform: translateY(-5px) scale(0.97);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+.demo-elastic-spring {
+  animation: kf-elastic-spring 0.85s ease-out both;
+}
+
+/* 08. Directional Exit & Re-entry */
+.demo-directional-exit {
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s ease;
+}
+
+.demo-directional-exit.is-exited {
+  opacity: 0.2;
+  transform: translate3d(52px, -18px, 0) scale(0.9);
+}
+
+.demo-directional-exit.is-entered {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* 09. Text Reveal */
+@keyframes kf-text-reveal {
+  0% {
+    transform: translateY(110%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.demo-text-reveal-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.demo-text-mask {
+  overflow: hidden;
+}
+
+.demo-text-line {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  animation: kf-text-reveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* 10. Typewriter */
+@keyframes kf-typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 22ch;
+  }
+}
+
+@keyframes kf-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.demo-typewriter-wrap {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.demo-typewriter-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--pf-border-primary);
+  width: 22ch;
+  animation: kf-typewriter 1.6s steps(22, end) both, kf-caret 0.7s step-end infinite;
+}
+
+/* 11. Split-Character Wave Stagger */
+.demo-char-stagger {
+  display: inline-flex;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.demo-char-glyph {
+  display: inline-block;
+  animation: kf-slide-up 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* 12. Cipher Text Scramble */
+.demo-scramble-box {
+  min-width: 195px;
+  text-align: center;
+}
+
+/* 13. Chromatic Glitch Slice */
+@keyframes kf-glitch-slice {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-3px, 1px);
+  }
+  50% {
+    transform: translate(3px, -1px);
+  }
+  75% {
+    transform: translate(-2px, -1px);
+  }
+}
+
+.demo-glitch-word {
+  position: relative;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 1.15rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  padding: 0.4rem 0.8rem;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+}
+
+.demo-glitch-word.playing {
+  animation: kf-glitch-slice 0.45s steps(2, end) infinite;
+}
+
+/* 14. Variable Weight & Shimmer Sweep */
+@keyframes kf-weight-pulse {
+  0%,
+  100% {
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+  50% {
+    font-weight: 900;
+    letter-spacing: 0.14em;
+  }
+}
+
+.demo-weight-shimmer {
+  font-size: 1.15rem;
+  animation: kf-weight-pulse 2.4s ease-in-out infinite;
+}
+
+.demo-weight-shimmer.paused {
+  animation-play-state: paused;
+}
+
+/* 15. Local View Crossfade, Slide & Wipe */
+@keyframes kf-wipe-right {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.demo-view-transition-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.demo-view-topbar {
+  display: flex;
+  gap: 0.35rem;
+  justify-content: center;
+}
+
+.demo-view-panel {
+  flex: 1;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.demo-view-panel.mode-crossfade {
+  animation: kf-fade-in 0.45s ease both;
+}
+
+.demo-view-panel.mode-slide {
+  animation: kf-slide-up 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.demo-view-panel.mode-wipe {
+  animation: kf-wipe-right 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* 16. Expanding Circle Iris Reveal */
+.demo-iris-stage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border: 1.5px solid var(--pf-border-primary);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.demo-iris-base,
+.demo-iris-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.demo-iris-base {
+  background-color: var(--pf-bg-container);
+  color: var(--pf-text-primary);
+}
+
+.demo-iris-overlay {
+  background-color: var(--pf-accent-inv-bg);
+  color: var(--pf-accent-inv-text);
+  clip-path: circle(0% at 50% 50%);
+  transition: clip-path 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.demo-iris-stage.iris-open .demo-iris-overlay {
+  clip-path: circle(140% at 50% 50%);
+}
+
+/* 17. Shared-Element Morph */
+.demo-shared-morph {
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.demo-shared-morph.compact {
+  width: 190px;
+  padding: 0.65rem 0.85rem;
+}
+
+.demo-shared-morph.expanded {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  box-shadow: 5px 5px 0 var(--pf-border-primary);
+}
+
+.demo-shared-badge {
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid var(--pf-border-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.demo-shared-copy {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.74rem;
+  gap: 0.15rem;
+}
+
+/* 18. Modal & Drawer */
+.demo-modal-stage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.demo-modal-triggers {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.demo-scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: kf-fade-in 0.2s ease both;
+}
+
+.demo-modal-sheet {
+  background-color: var(--pf-bg-container);
+  border: 2px solid var(--pf-border-primary);
+  padding: 0.85rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.76rem;
+  animation: kf-scale-in 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.demo-drawer-sheet {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 62%;
+  background-color: var(--pf-bg-container);
+  border-left: 2px solid var(--pf-border-primary);
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.76rem;
+  animation: kf-slide-up 0.25s ease both;
+}
+
+/* 19. Layout Rearrange */
+.demo-rearrange-wrap {
+  width: 100%;
+  max-width: 260px;
+  gap: 0.45rem;
+}
+
+.demo-rearrange-wrap.grid-mode {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.demo-rearrange-wrap.list-mode {
+  display: flex;
+  flex-direction: column;
+}
+
+.demo-rearrange-tile {
+  padding: 0.4rem 0.65rem;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-align: center;
+  animation: kf-scale-in 0.35s ease both;
+}
+
+/* 20. Morphing Shape */
+@keyframes kf-morph {
+  0%,
+  100% {
+    border-radius: 18% 82% 28% 72% / 65% 26% 74% 35%;
+  }
+  50% {
+    border-radius: 74% 26% 68% 32% / 28% 72% 28% 72%;
+  }
+}
+
+.demo-morph-blob {
+  width: 108px;
+  height: 88px;
+  border: 2px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  animation: kf-morph 4.2s ease-in-out infinite;
+}
+
+.demo-morph-blob.paused {
+  animation-play-state: paused;
+}
+
+/* 21. SVG Path Drawing */
+@keyframes kf-svg-draw {
+  0% {
+    stroke-dashoffset: 520;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.demo-svg-draw {
+  width: 210px;
+  height: 105px;
+  color: var(--pf-text-primary);
+}
+
+.svg-stroke-path {
+  stroke-dasharray: 520;
+  stroke-dashoffset: 520;
+  animation: kf-svg-draw 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* 22. Morphing Vector State Icon */
+.demo-svg-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 0.95rem;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  color: var(--pf-text-primary);
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.icon-line {
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: square;
+  transform-origin: 24px 24px;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.demo-svg-icon-btn.is-open .line-top {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.demo-svg-icon-btn.is-open .line-mid {
+  opacity: 0;
+}
+
+.demo-svg-icon-btn.is-open .line-bot {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* 23. Gooey Metaballs */
+@keyframes kf-goo-left {
+  0%,
+  100% {
+    transform: translateX(-28px);
+  }
+  50% {
+    transform: translateX(18px);
+  }
+}
+
+@keyframes kf-goo-right {
+  0%,
+  100% {
+    transform: translateX(28px);
+  }
+  50% {
+    transform: translateX(-18px);
+  }
+}
+
+.demo-gooey-stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gooey-droplets-wrap,
+.gooey-\ droplets-wrap {
+  position: relative;
+  width: 160px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gooey-drop {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: var(--pf-text-primary);
+}
+
+.playing .drop-left {
+  animation: kf-goo-left 2.4s ease-in-out infinite;
+}
+
+.playing .drop-right {
+  animation: kf-goo-right 2.4s ease-in-out infinite;
+}
+
+/* 24. Scroll-Triggered Reveal */
+.demo-scroll-box {
+  padding: 0.8rem 1.35rem;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: opacity 0.65s ease, transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.demo-scroll-box.is-hidden {
+  opacity: 0;
+  transform: translateY(28px) scale(0.94);
+}
+
+.demo-scroll-box.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* 25. Parallax Effect */
+.demo-parallax-viewport {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax-layer {
+  position: absolute;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.14s ease-out;
+}
+
+.parallax-back {
+  width: 165px;
+  height: 80px;
+  opacity: 0.45;
+  top: 16px;
+  left: 22px;
+}
+
+.parallax-mid {
+  width: 145px;
+  height: 64px;
+  opacity: 0.75;
+}
+
+.parallax-front {
+  width: 122px;
+  height: 48px;
+  box-shadow: 4px 4px 0 var(--pf-border-primary);
+}
+
+/* 26. Scroll-Scrub & Pinned Storytelling */
+.demo-scroll-scrub-viewport {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  border: 1px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+}
+
+.demo-scrub-sticky {
+  position: sticky;
+  top: 0;
+  background-color: var(--pf-bg-container);
+  border-bottom: 1px solid var(--pf-border-primary);
+  z-index: 2;
+}
+
+.demo-scrub-bar {
+  height: 4px;
+  background-color: var(--pf-border-primary);
+  transform-origin: left center;
+}
+
+.demo-scrub-hud {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.35rem 0.65rem;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.demo-scrub-wheel {
+  display: inline-block;
+  font-size: 0.95rem;
+}
+
+.demo-scrub-spacer {
+  padding: 0.65rem;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 0.76rem;
+  color: var(--pf-text-secondary);
+}
+
+/* 27. Horizontal Scroll & Snap */
+.demo-snap-track {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 1.25rem;
+}
+
+.demo-snap-card {
+  flex: 0 0 78%;
+  height: 86px;
+  scroll-snap-align: center;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+/* 28. Hover Lift */
+.demo-hover-card {
+  padding: 0.85rem 1.55rem;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.22rem;
+  cursor: pointer;
+  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.demo-hover-card:hover,
+.demo-hover-card:focus-visible,
+.demo-hover-card.is-hovered {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 0 var(--pf-border-primary);
+}
+
+.demo-hover-card-label {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.demo-hover-card-sub {
+  font-size: 0.7rem;
+  color: var(--pf-text-muted);
+}
+
+/* 29. Animated Button */
+.demo-interactive-btn {
+  position: relative;
+  overflow: hidden;
+  padding: 0.8rem 1.5rem;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  color: var(--pf-text-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.demo-interactive-btn-bg {
+  position: absolute;
+  inset: 0;
+  background-color: var(--pf-accent-inv-bg);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 0;
+}
+
+.demo-interactive-btn-text {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.demo-btn-arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.demo-interactive-btn:hover,
+.demo-interactive-btn:focus-visible,
+.demo-interactive-btn.is-hovered {
+  color: var(--pf-accent-inv-text);
+}
+
+.demo-interactive-btn:hover .demo-interactive-btn-bg,
+.demo-interactive-btn:focus-visible .demo-interactive-btn-bg,
+.demo-interactive-btn.is-hovered .demo-interactive-btn-bg {
+  transform: scaleX(1);
+}
+
+.demo-interactive-btn:hover .demo-btn-arrow,
+.demo-interactive-btn.is-hovered .demo-btn-arrow {
+  transform: translateX(5px);
+}
+
+/* 30. Magnetic Button */
+.demo-magnetic-btn {
+  padding: 0.78rem 1.35rem;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  color: var(--pf-text-primary);
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* 31. Animated Underline */
+.demo-underline-group {
+  display: flex;
+  gap: 1.65rem;
+}
+
+.demo-underline-link {
+  position: relative;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding-bottom: 0.28rem;
+  cursor: pointer;
+}
+
+.demo-underline-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--pf-border-primary);
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.26s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.demo-underline-link:hover::after,
+.demo-underline-link:focus-visible::after,
+.demo-underline-group.is-hovered .demo-underline-link::after {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+
+/* 32. Click Ripple & Press */
+@keyframes kf-ripple-expand {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(3.5);
+    opacity: 0;
+  }
+}
+
+.demo-ripple-btn {
+  position: relative;
+  overflow: hidden;
+  padding: 0.85rem 1.45rem;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  color: var(--pf-text-primary);
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.demo-ripple-btn:active {
+  transform: scale(0.96);
+}
+
+.demo-ripple-circle {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--pf-border-primary);
+  pointer-events: none;
+  animation: kf-ripple-expand 0.55s ease-out forwards;
+}
+
+/* 33. Toggle Switch, Checkmark & Error Shake */
+@keyframes kf-error-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-7px);
+  }
+  40%,
+  80% {
+    transform: translateX(7px);
+  }
+}
+
+.demo-feedback-suite {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+}
+
+.demo-feedback-suite.state-error {
+  animation: kf-error-shake 0.4s ease;
+}
+
+.demo-spring-switch {
+  width: 44px;
+  height: 24px;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-subtle);
+  padding: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.switch-thumb {
+  width: 16px;
+  height: 16px;
+  background-color: var(--pf-border-primary);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.demo-spring-switch.on .switch-thumb {
+  transform: translateX(19px);
+}
+
+/* 34. Rotating Element */
+@keyframes kf-spin-360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.demo-rotating-seal {
+  width: 78px;
+  height: 78px;
+  border: 1.5px dashed var(--pf-border-primary);
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: kf-spin-360 6s linear infinite;
+}
+
+.demo-rotating-seal.paused {
+  animation-play-state: paused;
+}
+
+.seal-ring {
+  width: 46px;
+  height: 46px;
+  border: 1.5px solid var(--pf-border-primary);
+}
+
+.seal-cross {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: var(--pf-border-primary);
+}
+
+/* 35. Skeleton Shimmer */
+@keyframes kf-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.demo-skeleton-card {
+  width: 230px;
+  padding: 0.85rem;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.shimmer-line {
+  background: linear-gradient(
+    90deg,
+    var(--pf-border-subtle) 25%,
+    var(--pf-bg-subtle) 50%,
+    var(--pf-border-subtle) 75%
+  );
+  background-size: 200% 100%;
+  animation: kf-shimmer 1.8s infinite linear;
+}
+
+.skeleton-avatar {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.skeleton-lines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.shimmer-line.w-80 {
+  height: 10px;
+  width: 85%;
+}
+
+.shimmer-line.w-55 {
+  height: 8px;
+  width: 60%;
+}
+
+.demo-skeleton-resolved {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.76rem;
+  gap: 0.2rem;
+}
+
+/* 36. Progress Bar & SVG Ring */
+.demo-progress-suite {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 250px;
+}
+
+.demo-linear-progress-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.74rem;
+}
+
+.demo-linear-track {
+  height: 10px;
+  border: 1px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+}
+
+.demo-linear-fill {
+  height: 100%;
+  background-color: var(--pf-border-primary);
+  transition: width 0.35s ease;
+}
+
+/* 37. Loading Dots & Wave */
+@keyframes kf-dot-wave {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0) scale(0.85);
+    opacity: 0.45;
+  }
+  40% {
+    transform: translateY(-10px) scale(1.15);
+    opacity: 1;
+  }
+}
+
+.demo-dots-wave {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.demo-dots-wave span {
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-text-primary);
+  animation: kf-dot-wave 1.2s ease-in-out infinite;
+}
+
+.demo-dots-wave span:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.demo-dots-wave span:nth-child(3) {
+  animation-delay: 0.32s;
+}
+
+.demo-dots-wave.paused span {
+  animation-play-state: paused;
+}
+
+/* 38. Pulsing Glow */
+@keyframes kf-pulse-ring {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(2.1);
+    opacity: 0;
+  }
+}
+
+.demo-pulse-beacon {
+  position: relative;
+  width: 86px;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pulse-ring {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid var(--pf-border-primary);
+  animation: kf-pulse-ring 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.pulse-ring-2 {
+  animation-delay: 1.1s;
+}
+
+.demo-pulse-beacon.paused .pulse-ring {
+  animation-play-state: paused;
+}
+
+.pulse-core {
+  position: relative;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+/* 39. Floating Elements */
+@keyframes kf-float-bob {
+  0%,
+  100% {
+    transform: translateY(-7px);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+.demo-floating-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.float-card {
+  padding: 0.65rem 1rem;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.74rem;
+  font-weight: 700;
+  animation: kf-float-bob 2.6s ease-in-out infinite;
+}
+
+.float-card.float-b {
+  animation-delay: -1.3s;
+}
+
+.demo-floating-group.paused .float-card {
+  animation-play-state: paused;
+}
+
+/* 40. Moving Horizon Grid */
+@keyframes kf-grid-scroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 32px;
+  }
+}
+
+.demo-horizon-stage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.horizon-grid-plane {
+  position: absolute;
+  inset: -20px;
+  background-image: linear-gradient(to right, var(--pf-border-subtle) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--pf-border-subtle) 1px, transparent 1px);
+  background-size: 32px 32px;
+  transform: perspective(220px) rotateX(52deg);
+  animation: kf-grid-scroll 1.4s linear infinite;
+}
+
+.demo-horizon-stage.paused .horizon-grid-plane {
+  animation-play-state: paused;
+}
+
+.horizon-badge {
+  position: relative;
+  z-index: 1;
+  padding: 0.45rem 0.85rem;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+/* 41. Infinite Marquee */
+@keyframes kf-marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.demo-marquee-viewport {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 44px;
+  overflow: hidden;
+  border-top: 1.5px solid var(--pf-border-primary);
+  border-bottom: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  display: flex;
+  align-items: center;
+}
+
+.demo-marquee-track {
+  position: absolute;
+  left: 0;
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.82rem;
+  font-weight: 800;
+  animation: kf-marquee 8s linear infinite;
+}
+
+.demo-marquee-viewport:hover .demo-marquee-track,
+.demo-marquee-viewport.paused .demo-marquee-track {
+  animation-play-state: paused;
+}
+
+/* 42. Film Grain & Noise */
+@keyframes kf-grain-shift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-4px, 3px);
+  }
+  50% {
+    transform: translate(3px, -4px);
+  }
+  75% {
+    transform: translate(-3px, -2px);
+  }
+}
+
+.demo-grain-stage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.grain-pattern-layer {
+  position: absolute;
+  inset: -12px;
+  background-image: radial-gradient(var(--pf-border-primary) 0.75px, transparent 0.75px);
+  background-size: 6px 6px;
+  opacity: 0.25;
+  animation: kf-grain-shift 0.35s steps(2, end) infinite;
+}
+
+.demo-grain-stage.paused .grain-pattern-layer {
+  animation-play-state: paused;
+}
+
+/* 43. 3D Card Tilt */
+.demo-tilt-card {
+  width: 170px;
+  height: 92px;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  box-shadow: 6px 6px 0 var(--pf-border-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  transition: transform 0.14s ease-out;
+}
+
+.demo-tilt-title {
+  font-weight: 700;
+  font-size: 0.84rem;
+}
+
+.demo-tilt-coords {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.7rem;
+  color: var(--pf-text-muted);
+}
+
+/* 44. Cursor Spotlight & Follower */
+.demo-spotlight-stage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.demo-cursor-follower {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--pf-border-primary);
+  pointer-events: none;
+  transition: transform 0.08s ease-out;
+}
+
+.demo-spotlight-label {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+}
+
+/* 45. Motion Path Orbit */
+.demo-orbit-stage {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orbit-ring-track {
+  position: absolute;
+  inset: 0;
+  border: 1.5px dashed var(--pf-border-primary);
+  border-radius: 50%;
+  animation: kf-spin-360 4.5s linear infinite;
+}
+
+.demo-orbit-stage.paused .orbit-ring-track {
+  animation-play-state: paused;
+}
+
+.orbit-satellite {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: var(--pf-border-primary);
+}
+
+.orbit-core-label {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* 46. Interactive 3D Cube */
+.demo-cube-scene {
+  width: 76px;
+  height: 76px;
+  perspective: 400px;
+}
+
+.demo-cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease-out;
+}
+
+.cube-face {
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  opacity: 0.92;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.62rem;
+  font-weight: 700;
+}
+
+.face-front {
+  transform: rotateY(0deg) translateZ(38px);
+}
+.face-back {
+  transform: rotateY(180deg) translateZ(38px);
+}
+.face-right {
+  transform: rotateY(90deg) translateZ(38px);
+}
+.face-left {
+  transform: rotateY(-90deg) translateZ(38px);
+}
+.face-top {
+  transform: rotateX(90deg) translateZ(38px);
+}
+.face-bottom {
+  transform: rotateX(-90deg) translateZ(38px);
+}
+
+/* 47. Image Mask Reveal */
+@keyframes kf-mask-wipe {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0% 0 0);
+  }
+}
+
+.demo-image-mask-frame {
+  width: 215px;
+  height: 106px;
+  border: 1px dashed var(--pf-border-subtle);
+  padding: 4px;
+}
+
+.demo-image-mask-inner {
+  width: 100%;
+  height: 100%;
+  animation: kf-mask-wipe 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.demo-architectural-art {
+  width: 100%;
+  height: 100%;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 0.5rem 0.65rem;
+  overflow: hidden;
+}
+
+.art-sun {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid var(--pf-border-primary);
+}
+
+.art-grid-lines {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to right, var(--pf-border-subtle) 1px, transparent 1px);
+  background-size: 24px 100%;
+  opacity: 0.5;
+}
+
+.art-caption {
+  position: relative;
+  z-index: 1;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+/* 48. Hover Zoom & Grayscale-to-Color */
+.demo-zoom-color-frame {
+  width: 220px;
+  height: 106px;
+  border: 1.5px solid var(--pf-border-primary);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.demo-zoom-color-art {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2563eb 0%, #db2777 55%, #f59e0b 100%);
+  filter: grayscale(100%);
+  transform: scale(1);
+  transition: filter 0.4s ease, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.demo-zoom-color-frame:hover .demo-zoom-color-art,
+.demo-zoom-color-frame:focus-visible .demo-zoom-color-art,
+.demo-zoom-color-frame.is-hovered .demo-zoom-color-art {
+  filter: grayscale(0%);
+  transform: scale(1.12);
+}
+
+.zoom-badge {
+  background-color: var(--pf-bg-container);
+  color: var(--pf-text-primary);
+  border: 1px solid var(--pf-border-primary);
+  padding: 0.25rem 0.5rem;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.64rem;
+  font-weight: 700;
+}
+
+/* 49. Duotone & Halftone */
+.demo-duotone-stage {
+  width: 220px;
+  height: 106px;
+  border: 1.5px solid var(--pf-border-primary);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.demo-duotone-stage.palette-0 {
+  background: linear-gradient(135deg, #111111, #e5e5e5);
+  color: #ffffff;
+}
+.demo-duotone-stage.palette-1 {
+  background: linear-gradient(135deg, #1e1b4b, #f43f5e);
+  color: #fef08a;
+}
+.demo-duotone-stage.palette-2 {
+  background: linear-gradient(135deg, #064e3b, #34d399);
+  color: #ffffff;
+}
+
+.duotone-halftone-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 8px 8px;
+  opacity: 0.28;
+}
+
+.duotone-label {
+  position: relative;
+  z-index: 1;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.28rem 0.6rem;
+  background: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+}
+
+/* 50. Animated Conic Border */
+.demo-conic-border-box {
+  position: relative;
+  padding: 3px;
+  background: repeating-conic-gradient(
+    var(--pf-border-primary) 0% 25%,
+    var(--pf-border-subtle) 25% 50%
+  );
+}
+
+.demo-conic-inner {
+  background-color: var(--pf-bg-container);
+  padding: 0.75rem 1.35rem;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+/* 51. Frosted Glass Lens */
+.demo-frosted-stage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frosted-back-type {
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.frosted-acrylic-lens {
+  position: absolute;
+  padding: 0.65rem 1.25rem;
+  border: 1.5px solid var(--pf-border-primary);
+  background: rgba(255, 255, 255, 0.35);
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.74rem;
+  font-weight: 700;
+  transition: backdrop-filter 0.25s ease;
+}
+
+/* 52. Sticky Header & Mode Crossfade */
+.demo-sticky-crossfade {
+  width: 225px;
+  height: 106px;
+  border: 1.5px solid var(--pf-border-primary);
+  background-color: var(--pf-bg-container);
+  color: var(--pf-text-primary);
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+.demo-sticky-crossfade.inverted-mode {
+  background-color: var(--pf-accent-inv-bg);
+  color: var(--pf-accent-inv-text);
+}
+
+.demo-sticky-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid currentColor;
+  font-size: 0.74rem;
+  transition: padding 0.25s ease;
+}
+
+.demo-sticky-bar.is-compact {
+  padding: 0.28rem 0.75rem;
+}
+
+.demo-sticky-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.74rem;
+}
+
+/* ==========================================================================
+   Card Metadata & Controls
+   ========================================================================== */
+
+.anim-meta-block {
+  font-size: 0.8rem;
+  line-height: 1.48;
+  color: var(--pf-text-secondary);
+  border-top: 1px solid var(--pf-border-subtle);
+  padding-top: 0.75rem;
+  margin-bottom: 0.85rem;
+  flex: 1;
+}
+
+.anim-indication,
+.anim-themes-note {
+  margin: 0 0 0.3rem;
+}
+
+.anim-indication strong,
+.anim-themes-note strong {
+  color: var(--pf-text-primary);
+}
+
+.anim-controls-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--pf-border-subtle);
+}
+
+.anim-instruction {
+  font-size: 0.74rem;
+  color: var(--pf-text-muted);
+}
+
+.anim-control-btn {
+  flex-shrink: 0;
+  padding: 0.38rem 0.78rem;
+  background-color: var(--pf-bg-container);
+  color: var(--pf-text-primary);
+  border: 1px solid var(--pf-border-primary);
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.anim-control-btn:hover {
+  background-color: var(--pf-accent-inv-bg);
+  color: var(--pf-accent-inv-text);
+}
+
+/* ==========================================================================
+   Responsive & Reduced-Motion Preferences
+   ========================================================================== */
+
+@media (max-width: 780px) {
+  .animations-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .anim-category-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .anim-card-header,
+  .anim-controls-row {
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-rotating-seal,
+  .demo-morph-blob,
+  .pulse-ring,
+  .demo-glitch-word,
+  .demo-weight-shimmer,
+  .gooey-drop,
+  .demo-dots-wave span,
+  .float-card,
+  .horizon-grid-plane,
+  .demo-marquee-track,
+  .grain-pattern-layer,
+  .orbit-ring-track {
+    animation: none !important;
+  }
+
+  .demo-fade-in,
+  .demo-slide-up,
+  .demo-scale-in,
+  .demo-stagger-item,
+  .demo-flip-3d,
+  .demo-blur-reveal,
+  .demo-elastic-spring,
+  .demo-text-line,
+  .demo-typewriter-text,
+  .demo-char-glyph,
+  .svg-stroke-path,
+  .demo-image-mask-inner {
+    animation-duration: 0.01ms !important;
+  }
+}
