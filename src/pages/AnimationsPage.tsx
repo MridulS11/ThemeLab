@@ -1285,6 +1285,24 @@ export const AnimationsPage: React.FC = () => {
               <option value="JS + DOM">JS + DOM</option>
             </select>
 
+            {(selectedCategory !== 'ALL' ||
+              selectedTrigger !== 'ALL' ||
+              selectedTech !== 'ALL' ||
+              searchQuery.trim() !== '') && (
+              <button
+                type="button"
+                className="catalogue-reset-btn"
+                onClick={() => {
+                  setSelectedCategory('ALL');
+                  setSelectedTrigger('ALL');
+                  setSelectedTech('ALL');
+                  setSearchQuery('');
+                }}
+              >
+                Reset ({filteredDemos.length}/{ANIMATION_DEMOS.length})
+              </button>
+            )}
+
             <button
               type="button"
               className="catalogue-reset-btn"
@@ -1364,16 +1382,21 @@ export const AnimationsPage: React.FC = () => {
             </button>
             {ANIMATION_CATEGORIES.map((cat) => {
               const count = ANIMATION_DEMOS.filter((d) => d.category === cat.id).length;
+              const isSelected = selectedCategory === cat.id;
               return (
                 <button
                   key={cat.id}
                   type="button"
                   role="tab"
-                  aria-selected={selectedCategory === cat.id}
-                  className={`catalogue-pill ${selectedCategory === cat.id ? 'active' : ''}`}
+                  aria-selected={isSelected}
+                  className={`catalogue-pill ${isSelected ? 'active' : ''}`}
                   onClick={() => {
-                    setSelectedCategory(cat.id);
-                    setCollapsedCategories((prev) => ({ ...prev, [cat.id]: false }));
+                    if (isSelected) {
+                      setSelectedCategory('ALL');
+                    } else {
+                      setSelectedCategory(cat.id);
+                      setCollapsedCategories((prev) => ({ ...prev, [cat.id]: false }));
+                    }
                   }}
                 >
                   {cat.code}. {cat.shortTitle} ({count})

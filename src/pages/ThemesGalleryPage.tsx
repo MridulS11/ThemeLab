@@ -102,14 +102,15 @@ export const ThemesGalleryPage: React.FC = () => {
             </button>
             {THEME_GROUPS.map((group) => {
               const count = THEMES.filter((t) => t.group === group).length;
+              const isSelected = selectedGroup === group;
               return (
                 <button
                   key={group}
                   type="button"
                   role="tab"
-                  aria-selected={selectedGroup === group}
-                  className={`catalogue-pill ${selectedGroup === group ? 'active' : ''}`}
-                  onClick={() => setSelectedGroup(group)}
+                  aria-selected={isSelected}
+                  className={`catalogue-pill ${isSelected ? 'active' : ''}`}
+                  onClick={() => setSelectedGroup(isSelected ? 'ALL' : group)}
                 >
                   {group} ({count})
                 </button>
