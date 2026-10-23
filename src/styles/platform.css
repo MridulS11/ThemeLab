@@ -644,6 +644,126 @@ button {
   margin: 0 0 0.85rem;
 }
 
+/* ==========================================================================
+   Dark Theme Sparkly Glittering Silver Shimmer for Subheadings
+   ========================================================================== */
+
+@keyframes silver-sparkle-sweep {
+  0% {
+    background-position: 180% center;
+    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.75))
+            drop-shadow(0 0 5px rgba(210, 225, 245, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 1))
+            drop-shadow(0 0 9px rgba(235, 245, 255, 0.75))
+            drop-shadow(0 0 16px rgba(195, 215, 245, 0.45));
+  }
+  100% {
+    background-position: -180% center;
+    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.75))
+            drop-shadow(0 0 5px rgba(210, 225, 245, 0.4));
+  }
+}
+
+@keyframes silver-sparkle-twinkle-left {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.8) rotate(0deg);
+    filter: drop-shadow(0 0 1px #ffffff);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(15deg);
+    filter: drop-shadow(0 0 5px #ffffff) drop-shadow(0 0 10px rgba(220, 235, 255, 0.9));
+  }
+}
+
+@keyframes silver-sparkle-twinkle-right {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1.15) rotate(-10deg);
+    filter: drop-shadow(0 0 4px #ffffff) drop-shadow(0 0 9px rgba(220, 235, 255, 0.8));
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.75) rotate(5deg);
+    filter: drop-shadow(0 0 1px #ffffff);
+  }
+}
+
+[data-platform-mode='dark'] .gallery-subheading,
+[data-platform-mode='dark'] .animations-subheading,
+.platform-shell[data-mode='dark'] .gallery-subheading,
+.platform-shell[data-mode='dark'] .animations-subheading {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: linear-gradient(
+    112deg,
+    #9aa5b5 0%,
+    #d8e1ec 14%,
+    #ffffff 26%,
+    #b0bccb 38%,
+    #ffffff 50%,
+    #e8eef6 64%,
+    #ffffff 76%,
+    #a2adb9 88%,
+    #ffffff 96%,
+    #9aa5b5 100%
+  );
+  background-size: 240% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: silver-sparkle-sweep 3.6s ease-in-out infinite;
+  will-change: background-position, filter;
+}
+
+[data-platform-mode='dark'] .gallery-subheading::before,
+[data-platform-mode='dark'] .animations-subheading::before,
+.platform-shell[data-mode='dark'] .gallery-subheading::before,
+.platform-shell[data-mode='dark'] .animations-subheading::before {
+  content: '✦';
+  font-size: 0.82rem;
+  line-height: 1;
+  -webkit-text-fill-color: #ffffff;
+  color: #ffffff;
+  animation: silver-sparkle-twinkle-left 2.4s ease-in-out infinite;
+}
+
+[data-platform-mode='dark'] .gallery-subheading::after,
+[data-platform-mode='dark'] .animations-subheading::after,
+.platform-shell[data-mode='dark'] .gallery-subheading::after,
+.platform-shell[data-mode='dark'] .animations-subheading::after {
+  content: '✧';
+  font-size: 0.88rem;
+  line-height: 1;
+  -webkit-text-fill-color: #ffffff;
+  color: #ffffff;
+  animation: silver-sparkle-twinkle-right 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-platform-mode='dark'] .gallery-subheading,
+  [data-platform-mode='dark'] .animations-subheading,
+  .platform-shell[data-mode='dark'] .gallery-subheading,
+  .platform-shell[data-mode='dark'] .animations-subheading {
+    animation: none;
+    background-position: 50% 50%;
+  }
+  [data-platform-mode='dark'] .gallery-subheading::before,
+  [data-platform-mode='dark'] .animations-subheading::before,
+  [data-platform-mode='dark'] .gallery-subheading::after,
+  [data-platform-mode='dark'] .animations-subheading::after {
+    animation: none;
+  }
+}
+
 .gallery-description {
   margin: 0;
   font-size: 1rem;
